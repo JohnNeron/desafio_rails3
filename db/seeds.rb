@@ -8,6 +8,6 @@
 
 10.times do |i|
     Movie.create(name: "Pelicula #{i + 1}", synopsis: "contenido #{rand(0..100)}", director: "director #{rand(1..50)}")
-    Show.create(name: "Pelicula #{i + 1}", synopsis: "contenido #{rand(0..100)}", director: "director #{rand(1..50)}")
-    Documentary.create(name: "Pelicula #{i + 1}", synopsis: "contenido #{rand(0..100)}", director: "director #{rand(1..50)}")
+    Show.create(name: "Serie #{i + 1}", synopsis: "contenido #{rand(0..100)}", director: "director #{rand(1..50)}")
+    Documentary.create(name: "Documental #{i + 1}", synopsis: "contenido #{rand(0..100)}", director: "director #{rand(1..50)}")
 end
