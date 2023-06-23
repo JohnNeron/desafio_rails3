@@ -1,0 +1,12 @@
+<h1>Movies disponibles</h1>
+<p>cantidad: <%= @movies.count %></p>
+
+<% @movies.each do |movie| %>
+    <h2><%= movie.name %></h2>
+    <p><%= movie.synopsis %></p>
+    <p><%= movie.director %></p>
+<% end %>
+
+<div class="text-center my-5">
+    <%= link_to "Crear otro", movies_new_path, class:"btn btn-dark" %>
+</div>

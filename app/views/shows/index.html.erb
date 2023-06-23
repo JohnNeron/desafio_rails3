@@ -1,0 +1,12 @@
+<h1>Series disponibles</h1>
+<p>cantidad: <%= @shows.count %></p>
+
+<% @shows.each do |show| %>
+    <h2><%= show.name %></h2>
+    <p><%= show.synopsis %></p>
+    <p><%= show.director %></p>
+<% end %>
+
+<div class="text-center my-5">
+    <%= link_to "Crear otro", shows_new_path, class:"btn btn-dark" %>
+</div>

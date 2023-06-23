@@ -1,0 +1,12 @@
+<h1>Documentales disponibles</h1>
+<p>cantidad: <%= @documentaries.count %></p>
+
+<% @documentaries.each do |documentary| %>
+    <h2><%= documentary.name %></h2>
+    <p><%= documentary.synopsis %></p>
+    <p><%= documentary.director %></p>
+<% end %>
+
+<div class="text-center my-5">
+    <%= link_to "Crear otro", documentaries_new_path, class:"btn btn-dark" %>
+</div>

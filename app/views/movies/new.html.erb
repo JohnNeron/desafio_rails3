@@ -1,0 +1,30 @@
+<h1 class="text-center my-5">Crear Pelicula</h1>
+<br><br>
+
+
+<div class="d-flex justify-content-center">
+    <div class="card col-6 ">
+        <%= form_with model: @movie, method: :post do |form| %>
+            <div class="border p-5 shadow ">
+                <div class="mb-3">
+                    <%= form.label :name, "Nombre de la Pelicula", class:"form-label" %>
+                    <%= form.text_field :name, class:"form-control" %>
+                </div>
+                <div class="mb-5">
+                    <%= form.label :synopsis, "Synopsis", class:"form-label" %>
+                    <%= form.text_area :synopsis, class:"form-control" %>
+                </div>
+                <div class="mb-5">
+                    <%= form.label :director, "Director encargado", class:"form-label" %>
+                    <%= form.text_area :director, class:"form-control" %>
+                </div>
+                <div class="text-center">
+                    <%= form.submit "Crear", class:"btn btn-dark" %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
+<div class="text-center my-5">
+    <%= link_to "Listado", movies_index_path, class:"btn btn-dark" %>
+</div>
